@@ -1,0 +1,24 @@
+[project]
+name = "pytest-blue"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+requires-python = ">3.7"
+description = "pytest plugin, adds fixture `blue` for debug printing"
+dynamic = ["version"]
+dependencies = ["pytest", "rich"]
+classifiers = ["Framework :: Pytest"]
+
+[project.urls]
+Home = "https://github.com/okken/pytest-blue"
+
+[project.entry-points.pytest11]
+pytest_blue = "pytest_blue.plugin"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "pytest_blue.__version__"}
+
+
